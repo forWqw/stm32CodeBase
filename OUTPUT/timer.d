@@ -3,7 +3,7 @@
 ..\output\timer.o: ..\SYSTEM\sys\sys.h
 ..\output\timer.o: ..\USER\stm32f10x.h
 ..\output\timer.o: ..\CORE\core_cm3.h
-..\output\timer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\timer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\timer.o: ..\USER\system_stm32f10x.h
 ..\output\timer.o: ..\USER\stm32f10x_conf.h
 ..\output\timer.o: ..\STM32F10x_FWLib\inc\stm32f10x_can.h
@@ -15,7 +15,7 @@
 ..\output\timer.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\output\timer.o: ..\HARDWARE\LED\led.h
 ..\output\timer.o: ..\SYSTEM\usart\usart.h
-..\output\timer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\output\timer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\output\timer.o: ..\STM32F10x_FWLib\inc\stm32f10x_tim.h
 ..\output\timer.o: ..\HARDWARE\4G\4G.h
 ..\output\timer.o: ..\SYSTEM\delay\delay.h

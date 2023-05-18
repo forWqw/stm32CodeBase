@@ -1,7 +1,7 @@
 ..\output\qdtft_demo.o: ..\HARDWARE\LCD\QDTFT_demo.c
 ..\output\qdtft_demo.o: ..\USER\stm32f10x.h
 ..\output\qdtft_demo.o: ..\CORE\core_cm3.h
-..\output\qdtft_demo.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\qdtft_demo.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\qdtft_demo.o: ..\USER\system_stm32f10x.h
 ..\output\qdtft_demo.o: ..\USER\stm32f10x_conf.h
 ..\output\qdtft_demo.o: ..\STM32F10x_FWLib\inc\stm32f10x_can.h

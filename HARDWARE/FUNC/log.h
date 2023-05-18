@@ -7,6 +7,6 @@ typedef enum log_leavel
 	DEBUG_ERROR
 } log_leavel_e;
 
-int log_printf(int debug_level, char *fmt, ...);
+void log_printf(int debug_level, char *fmt, ...);
 
 #endif

@@ -2,7 +2,7 @@
 ..\output\stm32f10x_adc.o: ..\STM32F10x_FWLib\inc\stm32f10x_adc.h
 ..\output\stm32f10x_adc.o: ..\USER\stm32f10x.h
 ..\output\stm32f10x_adc.o: ..\CORE\core_cm3.h
-..\output\stm32f10x_adc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\stm32f10x_adc.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\stm32f10x_adc.o: ..\USER\system_stm32f10x.h
 ..\output\stm32f10x_adc.o: ..\USER\stm32f10x_conf.h
 ..\output\stm32f10x_adc.o: ..\STM32F10x_FWLib\inc\stm32f10x_can.h

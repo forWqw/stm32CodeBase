@@ -3,7 +3,7 @@
 ..\output\main.o: ..\SYSTEM\sys\sys.h
 ..\output\main.o: ..\USER\stm32f10x.h
 ..\output\main.o: ..\CORE\core_cm3.h
-..\output\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\main.o: ..\USER\system_stm32f10x.h
 ..\output\main.o: ..\USER\stm32f10x_conf.h
 ..\output\main.o: ..\STM32F10x_FWLib\inc\stm32f10x_can.h
@@ -15,11 +15,11 @@
 ..\output\main.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\output\main.o: ..\SYSTEM\delay\delay.h
 ..\output\main.o: ..\SYSTEM\usart\usart.h
-..\output\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-..\output\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\output\main.o: ..\STM32F10x_FWLib\inc\stm32f10x_flash.h
-..\output\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-..\output\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\output\main.o: ..\HARDWARE\WDG\wdg.h
 ..\output\main.o: ..\HARDWARE\TIMER\timer.h
 ..\output\main.o: ..\STM32F10x_FWLib\inc\stm32f10x_tim.h
@@ -30,3 +30,4 @@
 ..\output\main.o: ..\HARDWARE\LCD\QDTFT_demo.h
 ..\output\main.o: ..\HARDWARE\DHT11\dht11.h
 ..\output\main.o: ..\HARDWARE\FUNC\func.h
+..\output\main.o: ..\HARDWARE\FUNC\log.h

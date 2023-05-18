@@ -1,7 +1,7 @@
 ..\output\gui.o: ..\HARDWARE\LCD\GUI.c
 ..\output\gui.o: ..\USER\stm32f10x.h
 ..\output\gui.o: ..\CORE\core_cm3.h
-..\output\gui.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\gui.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\gui.o: ..\USER\system_stm32f10x.h
 ..\output\gui.o: ..\USER\stm32f10x_conf.h
 ..\output\gui.o: ..\STM32F10x_FWLib\inc\stm32f10x_can.h

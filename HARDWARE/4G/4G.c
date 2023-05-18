@@ -10,6 +10,7 @@
 //#include "Picture.h"
 #include "QDTFT_demo.h"
 #include "func.h"
+#include "log.h"
 /////////////////////////////////////////////////////
 char *strx,*extstrx;
 
@@ -32,8 +33,8 @@ char IMEINUMBER[BUFLEN];//+CGSN: "869523052178994"
 */
 
 #define PRODUCEKEY 		"ict71NcvRb1"        //–ﬁ∏ƒ≤˙∆∑√ÿ‘ø
-#define DEVICENAME 		"test"           //–ﬁ∏ƒ…Ë±∏√˚≥∆
-#define DEVICESECRET 	"3011abb39a869cdf7d29d9fbaac39754" //–ﬁ∏ƒ…Ë±∏√ÿ‘ø
+#define DEVICENAME 		"test2"           //–ﬁ∏ƒ…Ë±∏√˚≥∆
+#define DEVICESECRET 	"698c9215f52788b68e5d31c215febb30" //–ﬁ∏ƒ…Ë±∏√ÿ‘ø
 #define MQTTHOSTURL 	"iot-06z00daa2jr8gpj.mqtt.iothub.aliyuncs.com"
 #define MQTTHOSTPORT 	1883
 
@@ -263,14 +264,17 @@ void CSTX_4G_RECTCPData(void)
     if(strx)
     {  
 				memset(get_msg, 0, sizeof(get_msg));
-				sscanf(buf_uart2.buf, "\r\n+QMTRECV: 0,0,\"/ict71NcvRb1/test/user/get\",\"%[^\"]", &get_msg);
-				printf("get msg is %s\r\n", get_msg);
+				sscanf(buf_uart2.buf, "\r\n+QMTRECV: 0,0,\"/ict71NcvRb1/test2/user/get\",\"%[^\"]", &get_msg);
+				log_printf(DEBUG_INIT, "get msg is %s\r\n", get_msg);
 				Clear_Buffer();
 				Gui_DrawFont_GBK16(16,10,RED,WHITE, "RECEIVE DATA"); 
-				
+			
+				func_set_work_status(get_msg);
+				/*
 				memset(result, 0, sizeof(result));
 				snprintf(result, sizeof(result), "%s", func_set_work_status(get_msg)?"Fail":"OK");
 				CSTX_4G_ALYIOTSenddata((u8 *)strlen(result), (u8 *)result);
+			*/
     }
 }
 
@@ -355,7 +359,7 @@ void CSTX_4G_ALYIOTSenddata(u8 *len,u8 *data)//…œ∑¢ ˝æ›£¨…œ∑¢µƒ ˝æ›∏˙∂‘”¶µƒ≤Âº˛”
 {
 		Gui_DrawFont_GBK16(16,10,RED,WHITE, "SEND DATA...");
     memset(ATSTR,0,BUFLEN);
-    sprintf(ATSTR,"AT+QMTPUB=0,1,1,0,\"/sys/%s/%s/thing/event/property/post\",\"{params:{CurrentDeviceStatus:%s}}\"\r\n",PRODUCEKEY,DEVICENAME,data);
+    sprintf(ATSTR,"AT+QMTPUB=0,1,1,0,\"/sys/%s/%s/thing/event/property/post\",\"{params:{RunningState:%s}}\"\r\n",PRODUCEKEY,DEVICENAME,data);
     printf("ATSTR = %s \r\n",ATSTR);
     Uart2_SendStr(ATSTR);// ‰»ÎIMEI,LWM2M–≠“È“™«ÛÃÓ»ÎIMEI–≈œ¢
     delay_ms(300);

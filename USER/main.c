@@ -20,6 +20,7 @@
 /////////////////////////////////////////////////////
 #include "dht11.h"
 #include "func.h"
+#include "log.h"
 
 ///***使用于4G版本**************/
 int main(void)
@@ -55,7 +56,7 @@ int main(void)
 
     uart3_init(115200);
     Uart3_SendStr("UART3 Init Successful\r\n");
-    printf("\r\n ############ http://www.csgsm.com/ ############\r\n ############("__DATE__ " - " __TIME__ ")############");
+    log_printf(DEBUG_INIT, "\r\n ############ http://www.csgsm.com/ ############\r\n ############("__DATE__ " - " __TIME__ ")############");
 
 
     //IWDG_Init(7,625);    //看门狗8S一次
@@ -67,21 +68,22 @@ int main(void)
     //DHT11_Init(); //初始化温湿度 用PA11
     Get_4GIMEI_NUM();   //显示IMEI序列号
     deviceStatusInit();
+		GPIO_SetBits(GPIOB,GPIO_Pin_5|GPIO_Pin_4|GPIO_Pin_3);
     while (1)
     {
-        printf("\r\n ############ ok! ############\r\n");
+        log_printf(DEBUG_INIT, "\r\n ############ ok! delay is %d############\r\n", delay_time);
         delay_ms(300);
         CSTX_4G_RECTCPData();
 
-        if (10 == delay_time)
+        if ( 0 == delay_time%10)
         {
             do_get();
-            delay_time = 0;
+            //delay_time = 0;
         }
         if (deviceFunc())
         {
-            printf("set relay status fail!\r\n");
-            return -1;
+            log_printf(DEBUG_INIT, "set relay status fail!\r\n");
+            continue;
         }
         IWDG_Feed();//喂狗
         delay_time ++;
